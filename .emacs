@@ -1,5 +1,6 @@
 (require 'package)
 
+(setq create-lockfiles nil)
 (setq warning-minimum-level :error)
 
 (add-to-list 'package-archives
