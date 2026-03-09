@@ -1,5 +1,6 @@
 (require 'package)
 
+(setq make-backup-files nil)
 (setq create-lockfiles nil)
 (setq warning-minimum-level :error)
 
