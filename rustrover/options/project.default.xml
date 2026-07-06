@@ -1,0 +1,52 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="FormatOnSaveOptions">
+        <option name="myRunOnSave" value="true" />
+      </component>
+      <component name="InspectionProjectProfileManager">
+        <profile version="1.0">
+          <option name="myName" value="Project Default" />
+        </profile>
+        <version value="1.0" />
+      </component>
+      <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "actions.on.save"
+  }
+}]]></component>
+      <component name="RsExternalLinterProjectSettings">
+        <option name="additionalArguments" value="-- -D warnings" />
+        <option name="tool" value="Clippy" />
+      </component>
+      <component name="TaskManager">
+        <task active="true" id="Default" summary="Default task">
+          <created>1781636675971</created>
+          <option name="number" value="Default" />
+          <option name="presentableId" value="Default" />
+          <updated>1781636675971</updated>
+          <workItem from="1781636677290" duration="471000" />
+        </task>
+        <servers />
+      </component>
+      <component name="TimeTrackingManager">
+        <option name="totallyTimeSpent" value="471000" />
+      </component>
+      <component name="WindowStateProjectService">
+        <state x="455" y="225" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1779539173744">
+          <screen x="0" y="34" width="1710" height="983" />
+        </state>
+        <state x="455" y="225" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.34.1710.983" timestamp="1779539173744" />
+        <state x="605" y="275" key="EnvironmentVariablesDialog" timestamp="1781636576293">
+          <screen x="0" y="34" width="1710" height="982" />
+        </state>
+        <state x="605" y="275" key="EnvironmentVariablesDialog/0.34.1710.982" timestamp="1781636576293" />
+        <state x="364" y="167" key="SettingsEditor" timestamp="1781636697427">
+          <screen x="0" y="34" width="1710" height="982" />
+        </state>
+        <state x="364" y="167" key="SettingsEditor/0.34.1710.982" timestamp="1781636697427" />
+      </component>
+    </defaultProject>
+  </component>
+</application>

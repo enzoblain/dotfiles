@@ -1,0 +1,8 @@
+org.jetbrains.junie
+ru.adelf.idea.dotenv
+com.intellij.ml.llm
+hg4idea
+Subversion
+PerforceDirectPlugin
+intellij.vitejs
+com.jetbrains.rust

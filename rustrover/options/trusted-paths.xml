@@ -1,0 +1,31 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$/Documents/CodeForcesrs" value="true" />
+        <entry key="$USER_HOME$/RustroverProjects/tmp" value="true" />
+        <entry key="/Volumes/T7/Programmation/haskell_parsing" value="true" />
+        <entry key="/Volumes/T7/Programmation/tmp" value="true" />
+        <entry key="/Volumes/T7/Projets/EmieEvents/backend" value="true" />
+        <entry key="/Volumes/T7/Projets/FlowPilot" value="true" />
+        <entry key="/Volumes/T7/Projets/Paragon/CandleUI" value="true" />
+        <entry key="/Volumes/T7/Projets/Paragon/CandleUI/Candle Engine" value="true" />
+        <entry key="/Volumes/T7/Projets/Paragon/Client" value="true" />
+        <entry key="/Volumes/T7/Projets/Paragon/Stratex" value="true" />
+        <entry key="/Volumes/T7/Projets/Paragon/Stratex/crates/Stratex" value="true" />
+        <entry key="/Volumes/T7/Projets/Paragon/crates/Stratex" value="true" />
+        <entry key="/Volumes/T7/Projets/Paragon/crates/Utterance" value="true" />
+        <entry key="/Volumes/T7/Projets/Vinculum" value="true" />
+        <entry key="/Volumes/T7/Projets/Vinculum/Haskell" value="true" />
+        <entry key="/Volumes/T7/Projets/Vinculum/Main" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="/Volumes/T7/Projets" />
+      </list>
+    </option>
+  </component>
+</application>
