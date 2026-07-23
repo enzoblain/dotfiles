@@ -1,0 +1,78 @@
+{
+  "project_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {}
+    },
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:14b",
+      "enable_thinking": false
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://127.0.0.1:11434"
+    }
+  },
+  "ssh_connections": [
+    {
+      "host": "100.124.215.122",
+      "username": "enzoblain",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/Users/enzoblain/scripts/./"
+          ]
+        },
+        {
+          "paths": [
+            "/Volumes/Home Server Enzo/Projets/Paragon/crates/Utterance/./"
+          ]
+        }
+      ]
+    }
+  ],
+  "base_keymap": "VSCode",
+  "file_types": {
+    "asm-collection": [
+      "*.{a80,z80,asm,inc,s}"
+    ],
+    "asm-collection-list": [
+      "*.{list,lis}"
+    ]
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "file_scan_exclusions": [
+    "**/._*"
+  ],
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+          "extraArgs": [
+            "--",
+            "-D",
+            "warnings"
+          ]
+        }
+      }
+    }
+  }
+}
