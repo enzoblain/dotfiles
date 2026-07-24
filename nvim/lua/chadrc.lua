@@ -2,16 +2,9 @@
 local M = {}
 
 M.base46 = {
-  theme = "github_dark",
-
-  transparency = true,
+  theme = "onedark",
 
   hl_override = {
-    Normal = { bg = "NONE" },
-    NormalFloat = { bg = "NONE" },
-    FloatBorder = { bg = "NONE" },
-    SignColumn = { bg = "NONE" },
-    EndOfBuffer = { bg = "NONE" },
     NvimTreeGitDirty = { fg = "white" },
     NvimTreeGitNew = { fg = "white" },
     NvimTreeGitDeleted = { fg = "white" },
@@ -19,6 +12,10 @@ M.base46 = {
     NvimTreeGitStaged = { fg = "white" },
     NvimTreeGitMerge = { fg = "white" },
     NvimTreeGitRenamed = { fg = "white" },
+    NvimTreeDiagnosticErrorFileHL = { fg = "red", bold = true },
+    NvimTreeDiagnosticWarnFileHL = { fg = "yellow" },
+    NvimTreeDiagnosticInfoFileHL = { fg = "blue" },
+    NvimTreeDiagnosticHintFileHL = { fg = "green" },
   },
 }
 

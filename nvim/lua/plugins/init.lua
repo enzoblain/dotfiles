@@ -1,7 +1,19 @@
 return {
   {
     "stevearc/conform.nvim",
-    opts = require "configs.conform",
+    opts = function(_, opts)
+      opts.formatters_by_ft = vim.tbl_deep_extend("force", opts.formatters_by_ft or {}, {
+        lua = { "stylua" },
+        rust = { "rustfmt" },
+      })
+
+      opts.format_on_save = {
+        timeout_ms = 100,
+        lsp_format = "fallback",
+      }
+
+      return opts
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -10,28 +22,28 @@ return {
     end,
   },
   {
-  'mrcjkb/rustaceanvim',
-    version = '^9',
+    "mrcjkb/rustaceanvim",
+    version = "^9",
     lazy = false,
-    config = function ()
-      local mason_registry = require('mason-registry')
-      local codelldb = mason_registry.get_package("codelldb")
+    config = function()
+      local mason_registry = require "mason-registry"
+      local codelldb = mason_registry.get_package "codelldb"
       local extension_path = codelldb:get_install_path() .. "/extension/"
       local codelldb_path = extension_path .. "adapter/codelldb"
-      local liblldb_path = extension_path.. "lldb/lib/liblldb.dylib"
-      local cfg = require('rustaceanvim.config')
+      local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
+      local cfg = require "rustaceanvim.config"
 
       vim.g.rustaceanvim = {
         dap = {
           adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
         },
       }
-    end
+    end,
   },
   {
-    'mfussenegger/nvim-dap',
+    "mfussenegger/nvim-dap",
     config = function()
-			local dap, dapui = require("dap"), require("dapui")
+      local dap, dapui = require "dap", require "dapui"
       dap.listeners.before.attach.dapui_config = function()
         dapui.open()
       end
@@ -44,37 +56,37 @@ return {
       dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
       end
-		end,
+    end,
   },
   {
-    'rcarriga/nvim-dap-ui', 
-    dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"},
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     config = function()
-			require("dapui").setup()
-		end,
+      require("dapui").setup()
+    end,
   },
   {
-    'rust-lang/rust.vim',
+    "rust-lang/rust.vim",
     ft = "rust",
-    init = function ()
+    init = function()
       vim.g.rustfmt_autosave = 1
-    end
+    end,
   },
   {
-   'saecki/crates.nvim',
-   ft = {"toml"},
-   config = function()
-    require("crates").setup {
-     completion = {
-        cmp = {
-            enabled = true
+    "saecki/crates.nvim",
+    ft = { "toml" },
+    config = function()
+      require("crates").setup {
+        completion = {
+          cmp = {
+            enabled = true,
           },
         },
       }
-      require('cmp').setup.buffer({
-        sources = { { name = "crates" }}
-      })
-    end
+      require("cmp").setup.buffer {
+        sources = { { name = "crates" } },
+      }
+    end,
   },
   {
     "folke/todo-comments.nvim",
