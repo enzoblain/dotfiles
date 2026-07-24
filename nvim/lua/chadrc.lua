@@ -2,7 +2,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "midnight_breeze",
+  theme = "github_dark",
 
   transparency = true,
 
@@ -12,6 +12,13 @@ M.base46 = {
     FloatBorder = { bg = "NONE" },
     SignColumn = { bg = "NONE" },
     EndOfBuffer = { bg = "NONE" },
+    NvimTreeGitDirty = { fg = "white" },
+    NvimTreeGitNew = { fg = "white" },
+    NvimTreeGitDeleted = { fg = "white" },
+    NvimTreeGitIgnored = { fg = "white" },
+    NvimTreeGitStaged = { fg = "white" },
+    NvimTreeGitMerge = { fg = "white" },
+    NvimTreeGitRenamed = { fg = "white" },
   },
 }
 
