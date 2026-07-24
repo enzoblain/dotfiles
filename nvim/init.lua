@@ -10,7 +10,7 @@ if not vim.uv.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-vim.env.PATH = vim.fn.expand "$HOME" .. "/.cargo/bin:" .. vim.env.PATH
+vim.env.PATH = vim.fn.expand("$HOME") .. "/.cargo/bin:" .. vim.env.PATH
 
 local lazy_config = require "configs.lazy"
 
