@@ -1,6 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
+    event = "BufWritePre",
     opts = function(_, opts)
       opts.formatters_by_ft = vim.tbl_deep_extend("force", opts.formatters_by_ft or {}, {
         lua = { "stylua" },
@@ -25,7 +26,7 @@ return {
     "mrcjkb/rustaceanvim",
     version = "^9",
     lazy = false,
-    config = function()
+    init = function()
       local mason_registry = require "mason-registry"
       local codelldb = mason_registry.get_package "codelldb"
       local extension_path = codelldb:get_install_path() .. "/extension/"
@@ -36,6 +37,20 @@ return {
       vim.g.rustaceanvim = {
         dap = {
           adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
+        },
+        server = {
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = {
+                allFeatures = true,
+              },
+              checkOnSave = true,
+              check = {
+                command = "clippy",
+                extraArgs = { "--", "-D", "warnings" },
+              },
+            },
+          },
         },
       }
     end,
