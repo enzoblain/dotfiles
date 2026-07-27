@@ -1,0 +1,4 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export CARGO_TARGET_DIR:/Users/enzoblain/\x2ecargo\x2dtarget
+SETUVAR fish_user_paths:/Users/enzoblain/\x2ecargo/bin

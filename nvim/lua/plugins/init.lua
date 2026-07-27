@@ -6,10 +6,22 @@ return {
       opts.formatters_by_ft = vim.tbl_deep_extend("force", opts.formatters_by_ft or {}, {
         lua = { "stylua" },
         rust = { "rustfmt" },
+        javascript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" },
+        svelte = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        scss = { "prettier" },
+        json = { "prettier" },
+        yaml = { "prettier" },
+        markdown = { "prettier" },
+        haskell = { "fourmolu" },
       })
 
       opts.format_on_save = {
-        timeout_ms = 100,
+        timeout_ms = 2000,
         lsp_format = "fallback",
       }
 
@@ -111,5 +123,13 @@ return {
     },
     cmd = "Neogit",
     opts = {},
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "master",
+    build = ":TSUpdate",
+    config = function()
+      require "configs.treesitter"
+    end,
   },
 }
