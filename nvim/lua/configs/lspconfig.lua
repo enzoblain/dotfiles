@@ -21,6 +21,7 @@ local servers = {
   "graphql",
   "htmx",
   "solidity",
+  "ols",
 }
 
 vim.lsp.enable(servers)
