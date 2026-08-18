@@ -27,6 +27,7 @@ return {
         markdown = { "prettier" },
         haskell = { "fourmolu" },
         odin = { "odinfmt" },
+        julia = { "runic" },
       })
 
       opts.format_on_save = {

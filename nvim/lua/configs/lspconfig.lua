@@ -22,6 +22,7 @@ local servers = {
   "htmx",
   "solidity",
   "ols",
+  "julials",
 }
 
 vim.lsp.enable(servers)
