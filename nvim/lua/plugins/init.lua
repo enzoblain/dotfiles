@@ -14,6 +14,7 @@ return {
       opts.formatters_by_ft = vim.tbl_deep_extend("force", opts.formatters_by_ft or {}, {
         lua = { "stylua" },
         rust = { "rustfmt" },
+        zig = { "zigfmt" },
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         typescript = { "prettier" },
@@ -45,6 +46,17 @@ return {
       require "configs.lspconfig"
 
       vim.lsp.enable "ols"
+      vim.lsp.enable "zls"
+      vim.lsp.enable "lua_ls"
+      vim.lsp.enable "ts_ls"
+      vim.lsp.enable "svelte"
+      vim.lsp.enable "html"
+      vim.lsp.enable "cssls"
+      vim.lsp.enable "jsonls"
+      vim.lsp.enable "yamlls"
+      vim.lsp.enable "marksman"
+      vim.lsp.enable "hls"
+      vim.lsp.enable "julials"
     end,
   },
 
