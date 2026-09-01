@@ -24,6 +24,7 @@ local servers = {
   "ols",
   "julials",
   "zls",
+  "sqls",
 }
 
 vim.lsp.enable(servers)

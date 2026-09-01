@@ -15,6 +15,7 @@ return {
         lua = { "stylua" },
         rust = { "rustfmt" },
         zig = { "zigfmt" },
+        sql = { "sql_formatter" },
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         typescript = { "prettier" },

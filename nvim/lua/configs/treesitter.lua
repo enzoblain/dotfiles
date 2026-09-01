@@ -10,6 +10,18 @@ local ensure_installed = {
   "lua",
   "rust",
   "haskell",
+  "zig",
+  "odin",
+  "julia",
+  "sql",
+  "toml",
+  "markdown",
+  "markdown_inline",
+  "bash",
+  "dockerfile",
+  "graphql",
+  "latex",
+  "solidity",
 }
 
 require("nvim-treesitter").install(ensure_installed)
@@ -28,6 +40,18 @@ vim.api.nvim_create_autocmd("FileType", {
     "lua",
     "rust",
     "haskell",
+    "zig",
+    "odin",
+    "julia",
+    "sql",
+    "toml",
+    "markdown",
+    "markdown_inline",
+    "bash",
+    "dockerfile",
+    "graphql",
+    "tex",
+    "solidity",
   },
   callback = function(args)
     vim.treesitter.start(args.buf)
