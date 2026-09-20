@@ -30,6 +30,7 @@ return {
         haskell = { "fourmolu" },
         odin = { "odinfmt" },
         julia = { "runic" },
+        solidity = { "prettier_solidity" },
       })
 
       opts.format_on_save = {
