@@ -14,7 +14,7 @@ return {
           command = "/opt/homebrew/bin/prettier",
           args = {
             "--plugin",
-            "prettier-plugin-solidity",
+            "/opt/homebrew/lib/node_modules/prettier-plugin-solidity/dist/index.js",
             "--stdin-filepath",
             "$FILENAME",
           },
