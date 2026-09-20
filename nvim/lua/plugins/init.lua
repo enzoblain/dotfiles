@@ -11,7 +11,7 @@ return {
         },
 
         prettier_global = {
-          command = "prettier",
+          command = "/opt/homebrew/bin/prettier",
           args = {
             "--plugin",
             "prettier-plugin-solidity",
