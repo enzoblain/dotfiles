@@ -9,6 +9,17 @@ return {
           args = { "-stdin" },
           stdin = true,
         },
+
+        prettier_global = {
+          command = "prettier",
+          args = {
+            "--plugin",
+            "prettier-plugin-solidity",
+            "--stdin-filepath",
+            "$FILENAME",
+          },
+          stdin = true,
+        },
       })
 
       opts.formatters_by_ft = vim.tbl_deep_extend("force", opts.formatters_by_ft or {}, {
@@ -16,6 +27,7 @@ return {
         rust = { "rustfmt" },
         zig = { "zigfmt" },
         sql = { "pg_format" },
+
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         typescript = { "prettier" },
@@ -27,10 +39,12 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+
         haskell = { "fourmolu" },
         odin = { "odinfmt" },
         julia = { "runic" },
-        solidity = { "prettier_solidity" },
+
+        solidity = { "prettier_global" },
       })
 
       opts.format_on_save = {
