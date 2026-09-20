@@ -95,16 +95,13 @@ return {
         dap = {
           adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
         },
-
         server = {
           settings = {
             ["rust-analyzer"] = {
               cargo = {
                 allFeatures = true,
               },
-
               checkOnSave = true,
-
               check = {
                 command = "clippy",
                 extraArgs = { "--", "-D", "warnings" },
@@ -196,6 +193,19 @@ return {
     build = ":TSUpdate",
     config = function()
       require "configs.treesitter"
+    end,
+  },
+
+  {
+    "benlubas/molten-nvim",
+    version = "^1.0.0",
+    dependencies = {
+      "3rd/image.nvim",
+    },
+    build = ":UpdateRemotePlugins",
+    init = function()
+      vim.g.molten_image_provider = "image.nvim"
+      vim.g.molten_output_win_max_height = 12
     end,
   },
 }

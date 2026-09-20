@@ -18,7 +18,7 @@ return {
   "bashls",
   "graphql",
   "htmx",
-  "solidity",
+  "solidity_ls_nomicfoundation",
   "ols",
   "julials",
   "zls",
