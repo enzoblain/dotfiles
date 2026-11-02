@@ -4,6 +4,9 @@ return {
     event = "BufWritePre",
     opts = function(_, opts)
       opts.formatters = vim.tbl_deep_extend("force", opts.formatters or {}, {
+        rustfmt = {
+          prepend_args = { "+nightly" },
+        },
         odinfmt = {
           command = "odinfmt",
           args = { "-stdin" },
@@ -100,6 +103,10 @@ return {
             ["rust-analyzer"] = {
               cargo = {
                 allFeatures = true,
+              },
+              imports = {
+                granularity = { group = "module" },
+                group = { enable = true },
               },
               checkOnSave = true,
               check = {
