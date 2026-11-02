@@ -2,3 +2,5 @@
 ._*
 
 fish/fish_variables
+cagent/user-uuid
+cagent/.cagent_first_run
